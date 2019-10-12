@@ -33,7 +33,7 @@ build:
 
 
 requirements:
-  host:
+  build:
     - pip
     - python
   run:
