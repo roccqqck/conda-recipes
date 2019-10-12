@@ -3,15 +3,20 @@ package:
   version: "2.0.0"
 
 source:
-   url: https://files.pythonhosted.org/packages/a1/eb/bc0784af18f612838f90419cf4805c37c20ddb957f5ffe0c42144562dcfa/tensorflow_gpu-2.0.0-cp37-cp37m-manylinux2010_x86_64.whl 
-   sha256: a79fcb04092afa2737a45ff81cfc74f4423d239bfe642159eb34c90233900157
+   url: https://files.pythonhosted.org/packages/a1/eb/bc0784af18f612838f90419cf4805c37c20ddb957f5ffe0c42144562dcfa/tensorflow_gpu-2.0.0-cp37-cp37m-manylinux2010_x86_64.whl  # [linux64 and py==37] 
+   sha256: a79fcb04092afa2737a45ff81cfc74f4423d239bfe642159eb34c90233900157  # [linux64 and py==37]
+   url: https://files.pythonhosted.org/packages/63/13/ea9ff554aa0043540a2387c28dd7926575eb25cf89e598caecea836d189d/tensorflow_gpu-2.0.0-cp37-cp37m-win_amd64.whl  # [win64 and py==37]
+   sha256: ccaae56548ab8a8148c1735ca176d2b2da103dc4cd8603fe86692b0b3c7530fb  # [win64 and py==37]
+
 
 build:
   number: 0
   entry_points:
     - tensorboard = tensorflow.tensorboard.tensorboard:main
   script:
-    - python -m pip install --no-deps --ignore-installed ./tensorflow_gpu-2.0.0-cp37-cp37m-manylinux2010_x86_64.whl
+    - python -m pip install --no-deps --ignore-installed ./tensorflow_gpu-2.0.0-cp37-cp37m-manylinux2010_x86_64.whl  # [linux64 and py==37]
+    - python -m pip install --no-deps --ignore-installed ./tensorflow_gpu-2.0.0-cp37-cp37m-win_amd64.whl  # [win64 and py==37]
+
 
 
 requirements:
@@ -66,7 +71,9 @@ test:
 
 about:
   home: http://tensorflow.org/
-  license: Apache 2.0
+  license: "Apache 2.0"
+  license_family: "Apache"
+  license_file: LICENSE
   summary: TensorFlow helps the tensors flow
 
 extra:
