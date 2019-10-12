@@ -22,7 +22,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [py27]
+  skip: True  # [py27]
   script:
     - python -m pip install --no-deps --ignore-installed ./sentencepiece-0.1.83-cp37-cp37m-manylinux1_x86_64.whl  # [linux and py==37]
     - python -m pip install --no-deps --ignore-installed ./sentencepiece-0.1.83-cp37-cp37m-win_amd64.whl  # [win and py==37]
@@ -47,7 +47,7 @@ about:
   home: "https://github.com/google/sentencepiece"
   license: "Apache-2.0"
   license_family: "Apache"
-  license_file: LICENSE
+  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
   summary: "SentencePiece is an unsupervised text tokenizer and detokenizer mainly for Neural Network-based text generation systems where the vocabulary size is predetermined prior to the neural model training."
   doc_url: ""
   dev_url: ""
