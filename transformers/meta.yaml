@@ -24,6 +24,7 @@ requirements:
     - python
     - regex
     - requests
+    - sacremoses
     - tqdm
   run:
     - boto3
@@ -31,11 +32,19 @@ requirements:
     - python
     - regex
     - requests
+    - sacremoses
     - tqdm
 
 test:
   imports:
-    - os
+    - transformers
+    - transformers.data
+    - transformers.data.metrics
+    - transformers.data.processors
+  commands:
+    - transformers --help
+  requires:
+    - pytest
 
 
 about:
@@ -45,7 +54,6 @@ about:
   license_file: LICENSE
   summary: "State-of-the-art Natural Language Processing for TensorFlow 2.0 and PyTorch"
   doc_url: https://huggingface.co/transformers/
-  dev_url: https://github.com/huggingface/transformers
 
 extra:
   recipe-maintainers:
