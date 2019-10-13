@@ -43,12 +43,11 @@ test:
     - pipenv --help
 
 about:
-  home: https://pipenv-fork.readthedocs.io/en/latest/
+  home: https://pipenv-fork.readthedocs.io
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: "Python Development Workflow for Humans."
-  doc_url: https://pipenv-fork.readthedocs.io/en/latest/
   dev_url: https://github.com/pypa/pipenv
 
 extra:
