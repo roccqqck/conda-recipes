@@ -33,7 +33,6 @@ about:
   license_file: LICENSE
   summary: "financial mining"
   doc_url: https://linsamtw.github.io/FinMindDoc
-  dev_url: https://github.com/FinMind/FinMind
 
 extra:
   recipe-maintainers:
