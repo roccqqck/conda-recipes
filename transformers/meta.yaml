@@ -18,14 +18,8 @@ build:
 
 requirements:
   host:
-    - boto3
-    - numpy
     - pip
     - python
-    - regex
-    - requests
-    - sacremoses
-    - tqdm
   run:
     - boto3
     - numpy
@@ -49,7 +43,7 @@ test:
 
 about:
   home: https://github.com/huggingface/transformers
-  license: Apache Software
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
   summary: "State-of-the-art Natural Language Processing for TensorFlow 2.0 and PyTorch"
