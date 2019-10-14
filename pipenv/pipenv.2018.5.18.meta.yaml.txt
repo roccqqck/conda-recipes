@@ -6,8 +6,8 @@ package:
   version: "{{ version }}"
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "04b9a8b02a3ff12a5502b335850cfdb192adcfd1d6bbdb7a7c47cae9ab9ddece"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 04b9a8b02a3ff12a5502b335850cfdb192adcfd1d6bbdb7a7c47cae9ab9ddece
 
 build:
   noarch: python
@@ -16,7 +16,7 @@ build:
     - pipenv=pipenv:cli
     - pewtwo=pipenv.patched.pew.pew:pew
     - pipenv-resolver=pipenv.resolver:main
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
@@ -42,13 +42,12 @@ test:
     - pipenv --help
 
 about:
-  home: "https://github.com/pypa/pipenv"
-  license: "MIT"
-  license_family: "MIT"
-  license_file: ""
+  home: https://github.com/pypa/pipenv
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
   summary: "Python Development Workflow for Humans."
-  doc_url: ""
-  dev_url: ""
+  doc_url: https://pipenv-fork.readthedocs.io/en/latest/
 
 extra:
   recipe-maintainers:
