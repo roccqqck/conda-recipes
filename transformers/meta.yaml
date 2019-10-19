@@ -1,0 +1,57 @@
+{% set name = "transformers" %}
+{% set version = "2.1.1.0.1" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: https://github.com/huggingface/transformers/archive/master.zip
+  sha256: b410768f3ca3a8672b16b37d0a15db265955294058c03783cf6e854fcf7416f3
+# https://github.com/Pandinosaurus/pytorch-pretrained-BERT/pull/186
+# 2019-10-19
+# https://github.com/huggingface/transformers/commit/82f6abd98aaa691ca0adfe21e85a17dc6f386497
+
+build:
+  noarch: python
+  number: 0
+  entry_points:
+    - transformers=transformers.__main__:main
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - boto3
+    - numpy
+    - python
+    - regex
+    - requests
+    - sacremoses
+    - tqdm
+
+test:
+  imports:
+    - transformers
+    - transformers.data
+    - transformers.data.metrics
+    - transformers.data.processors
+  commands:
+    - transformers --help
+  requires:
+    - pytest
+
+about:
+  home: "https://github.com/huggingface/transformers"
+  license: Apache-2.0
+  license_family: APACHE
+  license_file: LICENSE
+  summary: "State-of-the-art Natural Language Processing for TensorFlow 2.0 and PyTorch"
+  doc_url:
+  dev_url:
+
+extra:
+  recipe-maintainers:
+    - roccqqck
