@@ -1,5 +1,5 @@
 {% set name = "pipenv" %}
-{% set version = "2019.10.19" %}
+{% set version = "2019.10.17" %}
 
 package:
   name: "{{ name|lower }}"
