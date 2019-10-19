@@ -1,0 +1,49 @@
+{% set name = "pipenv" %}
+{% set version = "2019.10.19" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: https://github.com/pypa/pipenv/archive/master.zip 
+  sha256: e30cda96a41de28dc5e5ca34e2e8e0a69b128c7a0d44dc2a04dedd92e4b4f709  
+
+build:
+  noarch: python
+  number: 0
+  entry_points:
+    - pipenv=pipenv:cli
+    - pipenv-resolver=pipenv.resolver:main
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - pip >=9.0.1
+    - python >=3.5
+  run:
+    - certifi
+    - pip >=9.0.1
+    - python >=3.5
+    - setuptools >=36.2.1
+    - virtualenv
+    - virtualenv-clone >=0.2.5
+
+test:
+  imports:
+    - pipenv
+  commands:
+    - pipenv --help
+
+about:
+  home: "https://github.com/pypa/pipenv"
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: "Python Development Workflow for Humans."
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - roccqqck
