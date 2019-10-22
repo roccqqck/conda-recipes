@@ -7,9 +7,9 @@ package:
 
 source:
   url: https://github.com/huggingface/transformers/archive/master.zip
-  sha256: dcb05f5e7d574d3889d352135cdb65cb8e2fa3f5eb09e18d41510da11e27ef21
+  sha256: 4479929dfe8e2ca55dc6b021d50eabacb07ed93e7d9a2b985989b281ac0de72d
 # 2019-10-22
-# https://github.com/huggingface/transformers/commit/4d456542e9d381090f9a00b2bcc5a4cb07f6f3f7
+# https://github.com/huggingface/transformers/commit/b8c9ea0010a09cca8173e5bdf4af855123aebfc7
 
 build:
   noarch: python
