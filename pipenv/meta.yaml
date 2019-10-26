@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pypa/pipenv/archive/4ca88493121177e9317debdb9dd39b0be2afea9b.zip 
-  sha256: e30cda96a41de28dc5e5ca34e2e8e0a69b128c7a0d44dc2a04dedd92e4b4f709  
+  sha256: d18c7e4d7596c928aa694718586ee582fc35f37b7d4aaeb690f75ff568f77930  
 # https://github.com/pypa/pipenv/pull/3939   
 # 2019-10-17 01:47 GMT+0
 # https://github.com/pypa/pipenv/commit/4ca88493121177e9317debdb9dd39b0be2afea9b
