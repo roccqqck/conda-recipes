@@ -6,10 +6,10 @@ package:
   version: "{{ version }}"
 
 source:
-  url: https://github.com/huggingface/transformers/archive/1a2b40cb53477b94c66718bac8d997297fcc8043.zip
-  sha256: e8407fa3d656546f403ec61b6ef0006ed848c8fce284f693a1ecde2de7bb643f 
+  url: https://github.com/huggingface/transformers/archive/8a62835577a2a93642546858b21372e43c1a1ff8.zip
+  sha256: acb85fac0931790fdcdab5f809c3273ca7038486da9acce42c02412b73d386f4
 # 2019-11-01
-# https://github.com/huggingface/transformers/commit/1a2b40cb53477b94c66718bac8d997297fcc8043
+# https://github.com/huggingface/transformers/commit/8a62835577a2a93642546858b21372e43c1a1ff8
 
 build:
   noarch: python
