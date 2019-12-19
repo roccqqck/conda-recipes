@@ -3,6 +3,7 @@
 https://anaconda.org/roccqqck 
 
 
+可安裝在虛擬環境
 ```
 conda install git patch conda-build anaconda-client
 conda config --append channels conda-forge
@@ -53,3 +54,11 @@ cd ~
 conda-build --python 3.7 套件名
 conda-build --python 3.6 套件名
 ```
+
+
+上傳到anaconda
+```
+cd ~/anaconda3/conda-bld/noarch
+anaconda upload 套件名.tar.bz2
+```
+輸入anaconda的帳號密碼
